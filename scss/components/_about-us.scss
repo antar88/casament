@@ -1,0 +1,100 @@
+/* About-us */
+.couple-wrap {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+        width: 100%;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .groom-wrap {
+        margin-bottom: 40px;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+            padding-right: 30px;
+        }
+    }
+
+    .bride-wrap {
+        @include media-breakpoint-up(md) {
+            padding-left: 30px;
+        }
+    }
+}
+
+.heart {
+    position: absolute;
+    top: 3em;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    display: none;
+
+    i {
+        font-size: 20px;
+        padding: 20px;
+        color: $primary;
+        animation: pulse 1s ease infinite;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: block;
+    }
+}
+
+.groom,
+.bride {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+
+    @include media-breakpoint-up(md) {
+        float: left;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+}
+
+.groom {
+    @include media-breakpoint-up(md) {
+        float: right;
+        margin-right: 5px;
+    }
+}
+
+.bride {
+    @include media-breakpoint-up(md) {
+        float: left;
+        margin-left: 5px;
+    }
+}
+
+.desc-groom {
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        padding-right: 180px;
+        text-align: right;
+    }
+}
+
+.desc-bride {
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+        padding-left: 180px;
+        text-align: left;
+    }
+}

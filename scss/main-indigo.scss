@@ -1,0 +1,10 @@
+// Overwrite variables
+@import 'variables';
+
+$primary: #3f51b5;
+
+// Include all of Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+@import 'components/components';

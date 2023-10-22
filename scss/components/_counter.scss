@@ -1,0 +1,59 @@
+/* Counter */
+.counter {
+    text-align: center;
+    background-image: url('../images/counter-bg.jpg');
+    height: auto;
+
+    &-value {
+        font-size: 50px;
+        line-height: 1;
+        color: $white;
+        font-weight: 100;
+        display: block;
+    }
+
+    &-label {
+        margin-bottom: 0;
+        text-transform: lowercase;
+        color: $white;
+        font-family: $heading-font;
+        font-size: 30px;
+    }
+
+    .row {
+        @include media-breakpoint-up(md) {
+            margin-bottom: -40px;
+        }
+    }
+
+    .feature-center {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 0 20px;
+        width: 100%;
+        opacity: 0;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    .icon {
+        width: 90px;
+        height: 90px;
+        border: 2px solid $brand-lighter;
+        display: table;
+        text-align: center;
+        margin: 0 auto 30px auto;
+        box-shadow: 0px 14px 30px -15px rgba($black, 0.75);
+        border-radius: 50%;
+
+        i {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 40px;
+            line-height: 40px;
+            color: $primary;
+        }
+    }
+}

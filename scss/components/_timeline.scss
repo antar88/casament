@@ -1,0 +1,219 @@
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    &::before {
+        content: " ";
+        top: 50px;
+        bottom: 0;
+        position: absolute;
+        width: 1px;
+        height: 65%;
+        background-color: $brand-gray;
+        left: 30px;
+
+        @include media-breakpoint-up(sm) {
+            left: 80px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            left: 50%;
+        }
+    }
+
+    &-badge {
+        left: 0;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 16px;
+        z-index: 100;
+
+        img {
+            border-radius: 50%;
+        }
+
+        @include media-breakpoint-up(sm) {
+            width: 160px;
+            height: 160px;
+            margin-left: 0;
+        }
+    }
+
+    &-panel {
+        width: 75%;
+        float: right;
+        border: 1px solid $brand-gray;
+        padding: 30px;
+        position: relative;
+        border-radius: 4px;
+
+        &::before {
+            content: " ";
+            left: -15px;
+            right: auto;
+            position: absolute;
+            top: 30px;
+            display: inline-block;
+            border-top: 15px solid transparent;
+            border-left: 0 solid #ccc;
+            border-right: 15px solid #ccc;
+            border-bottom: 15px solid transparent;
+
+            @include media-breakpoint-up(lg) {
+                right: -15px;
+                left: auto;
+                border-right-width: 0;
+                border-left-width: 15px;
+            }
+        }
+
+        &::after {
+            content: " ";
+            left: -14px;
+            right: auto;
+            position: absolute;
+            top: 31px;
+            display: inline-block;
+            border-top: 14px solid transparent;
+            border-left: 0 solid #FFFFFF;
+            border-right: 14px solid #FFFFFF;
+            border-bottom: 14px solid transparent;
+
+            @include media-breakpoint-up(lg) {
+                right: -14px;
+                left: auto;
+                border-left-width: 14px;
+                border-right-width: 0;
+            }
+        }
+
+        @include media-breakpoint-up(sm) {
+            width: calc(100% - 200px);
+
+            &::before{
+                top: 80px;
+            }
+
+            &::after{
+                top: 81px;
+            }
+        }
+    }
+
+    &-title {
+        margin-top: 0;
+        font-size: 24px;
+    }
+
+    &-body {
+        > p,
+        > ul {
+            margin-bottom: 0;
+        }
+
+        > p + p {
+            margin-top: 5px;
+        }
+    }
+
+    &-item {
+        opacity: 0;
+    }
+
+    &-item:nth-child(2n) {
+        .timeline-panel {
+            float: right;
+
+            &::before {
+                border-left-width: 0;
+                border-right-width: 15px;
+                left: -15px;
+                right: auto;
+            }
+
+            &::after {
+                border-left-width: 0;
+                border-right-width: 14px;
+                left: -14px;
+                right: auto;
+            }
+        }
+    }
+
+    &-readmore {
+        display: inline-block;
+        margin-top: 5px;
+        color: $black;
+        text-decoration: underline;
+    }
+
+    > li {
+        margin-bottom: 20px;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::before,
+        &::after {
+            content: " ";
+            display: table;
+        }
+
+        &::after{
+            clear: both;
+        }
+
+        .timeline-panel {
+            @include media-breakpoint-up(lg) {
+                width: 38%;
+                float: left;
+            }
+        }
+
+        .timeline-badge {
+            @include media-breakpoint-up(lg) {
+                left: 50%;
+                margin-left: -80px;
+            }
+
+            &::before {
+                @include media-breakpoint-up(lg) {
+                    right: -15px;
+                    left: auto;
+                    border-right-width: 0;
+                    border-left-width: 15px;
+                }
+            }
+
+            &::after {
+                @include media-breakpoint-up(lg) {
+                    right: -14px;
+                    left: auto;
+                    border-left-width: 14px;
+                    border-right-width: 0;
+                }
+            }
+        }
+    }
+
+    .date {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
+
+.section-gray {
+    .timeline .timeline-panel::after {
+        border-left-color: $brand-lighter;
+        border-right-color: $brand-lighter;
+    }
+}

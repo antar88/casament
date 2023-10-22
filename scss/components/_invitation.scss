@@ -1,0 +1,187 @@
+/* Invitation */
+.invitation {
+    &_heading {
+        font-size: 18px;
+    }
+
+    .send-button {
+        margin-top: 10px;
+    }
+
+    .form-wrapper {
+        background: $white;
+        padding: 20px 35px 30px;
+        margin-bottom: 40px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    h3 {
+        margin: 10px 0;
+    }
+
+    .video {
+        height: 450px;
+        overflow: hidden;
+        border-radius: 0;
+        background-image: url(../images/video-bg.jpg);
+
+        @include media-breakpoint-up(md) {
+            height: 100%;
+        }
+
+        &:hover {
+            .overlay {
+                opacity: 0.5;
+            }
+        }
+
+        a {
+            z-index: 1001;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            display: table;
+            text-align: center;
+            color: rgba($white, 0.5);
+            text-decoration: none;
+
+            i {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+
+        .overlay {
+            transition: all 0.5s ease;
+        }
+    }
+
+    .form-field {
+        position: relative;
+        margin: 17px 0;
+
+        .control-label {
+            padding: 0;
+            line-height: 1;
+            position: absolute;
+            top: 18px;
+            left: 30px;
+            transition: all 0.3s ease;
+            font-weight: 300;
+
+            &.filled {
+                top: -24px;
+            }
+        }
+
+        .remove_field {
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            border-left: 1px solid $black;
+            padding: 0 10px;
+        }
+    }
+
+    .switch-field {
+        position: relative;
+        height: 50px;
+
+        .switch {
+            position: absolute;
+            top: 0;
+            left: 15px;
+            width: calc(100% - 30px);
+            height: 50px;
+            text-align: center;
+            transition: all 0.2s ease;
+
+            label {
+                cursor: pointer;
+                position: absolute;
+                width: calc(50% - 15px);
+                line-height: 50px;
+                transition: all 0.2s ease;
+                color: $black;
+                border: 1px solid $black;
+                border-radius: 0;
+                font-weight: 700;
+            }
+
+            span {
+                display: none;
+                position: absolute;
+                width: 20px;
+                height: 4px;
+                top: 50%;
+                left: 50%;
+                transform: rotate(-45deg);
+                transition: all 0.2s ease;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 4px;
+                    transition: all 0.2s ease;
+                }
+            }
+        }
+
+        input[type=radio] {
+            display: none;
+        }
+
+        label[for=yes] {
+            left: 0px;
+        }
+
+        label[for=no] {
+            right: 0px;
+        }
+
+        #yes:checked {
+            ~.switch label[for=yes] {
+                border-color: $success;
+                color: $success;
+            }
+
+            ~.switch span {
+                background: $success;
+                margin: -2px 0px 0px -4px;
+                transform: rotate(-45deg);
+
+                &::after {
+                    background: $success;
+                    margin-top: -8px;
+                    width: 4px;
+                    height: 12px;
+                }
+            }
+        }
+
+        #no:checked {
+            ~.switch label[for=no] {
+                border-color: $danger;
+                color: $danger;
+            }
+
+            ~.switch span {
+                background: $danger;
+                margin-left: -8px;
+
+                &::after {
+                    background: $danger;
+                    height: 20px;
+                    margin-top: -8px;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,138 @@
+.blog {
+    &-item {
+		margin-bottom: 50px;
+
+        &_texst {
+            p {
+                margin-bottom: 5px;
+            }
+        }
+
+        &_title {
+            margin-top: 30px;
+            margin-bottom: 12px;
+            font-size: 20px;
+
+            a {
+                color: $black;
+                text-decoration: none;
+            }
+        }
+
+        &_meta {
+            margin-bottom: 7px;
+            font-size: 0.85em;
+
+            span {
+                padding-right: 5px;
+                i {
+                    padding-right: 3px;
+                }
+            }
+        }
+    }
+}
+
+// Single post
+.single-post {
+    &_banner {
+        margin-bottom: 40px;
+    }
+
+    &_title {
+		margin-bottom: 40px;
+        font-family: $heading-font;
+	}
+}
+
+.post-content {
+    blockquote {
+        text-align: center;
+        border: none;
+        font-style: italic;
+        font-weight: 600;
+
+        &::after,
+        &::before {
+            content: '"';
+        }
+    }
+}
+
+.post-hightlight {
+    border: 4px solid $brand-lighter;
+    padding: 30px;
+    margin: 10px 0 20px;
+    font-size: 20px;
+    font-weight: 600;
+
+    @include media-breakpoint-up(lg) {
+        width: 33%;
+        margin-left: 20px;
+        float: right;
+    }
+
+    &::before {
+        content: 'HIGHLIGHT';
+        display: block;
+        font-size: 14px;
+        font-weight: 300;
+    }
+}
+
+.post-tags {
+    a {
+        padding: 0 5px;
+    }
+}
+
+// Widget Latest posts
+.widget {
+    margin-bottom: 50px;
+
+    &_title {
+        margin-bottom: 20px;
+        font-family: $heading-font;
+    }
+
+    &_latest-posts {
+        .post {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .post_image {
+            margin-right: 20px;
+        }
+    }
+
+    &_categories {
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            border-bottom: 1px solid #F2F2F2;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        span {
+            float: right;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+}

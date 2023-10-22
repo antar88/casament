@@ -1,0 +1,65 @@
+/* Events */
+.events-accordion {
+    h3 {
+        font-size: 20px;
+    }
+
+    .accordion-img {
+        margin-top: -20px;
+        margin-bottom: 20px;
+        max-height: 400px;
+        overflow: hidden;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+            max-height: inherit;
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-height: 485px;
+        }
+    }
+
+    .panel-heading {
+        padding: 10px 15px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        background-color: $brand-lighter;
+
+        + .panel-collapse > .panel-body {
+            padding: 0 15px 5px;
+        }
+    }
+
+    .panel + .panel {
+        margin-top: 5px;
+    }
+
+    .panel-title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+        color: inherit;
+
+        > a {
+            display: inline-block;
+            width: 100%;
+            text-decoration: none;
+            color: $brand-dark2;
+
+            &:hover,
+            &[aria-expanded="true"] {
+                color: $black;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .panel-default {
+        box-shadow: none;
+    }
+
+    .panel-place {
+        padding: 5px 15px 0;
+    }
+}
