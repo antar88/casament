@@ -12472,7 +12472,7 @@ img {
   background: #000;
 }
 .navbar-brand {
-  color: #fff;
+  color: #000;
   font-family: "Great Vibes", cursive;
 }
 .navbar .offcanvas-title {
@@ -12484,12 +12484,12 @@ img {
 }
 @media (min-width: 768px) {
   .navbar .nav-link {
-    color: #fff;
+    color: #000;
   }
 }
 @media (min-width: 768px) {
   .navbar .nav-link.active {
-    color: #fff;
+    color: #000;
   }
 }
 .navbar .nav-link.active::after {
@@ -12509,11 +12509,11 @@ img {
 }
 @media (min-width: 992px) {
   .navbar .nav-link.active::after {
-    background: #fff;
+    background: #000;
   }
 }
 .navbar .navbar-toggler {
-  color: #fff;
+  color: #000;
   border: none;
 }
 .navbar .navbar-toggler:active, .navbar .navbar-toggler:focus {
@@ -12723,7 +12723,10 @@ img {
     font-size: 50px;
   }
 }
-.countdown .heading h2, .countdown .heading .h2,
+.countdown .heading h2, .countdown .heading .h2 {
+  color: #000000;
+}
+
 .countdown .heading p {
   color: #fff;
 }
@@ -13308,21 +13311,21 @@ img {
 .invitation h3, .invitation .h3 {
   margin: 10px 0;
 }
-.invitation .video {
+.invitation .photo {
   height: 450px;
   overflow: hidden;
   border-radius: 0;
-  background-image: url(../images/video-bg.jpg);
+  background-image: url(../images/rsvp.jpg);
 }
 @media (min-width: 768px) {
-  .invitation .video {
+  .invitation .photo {
     height: 100%;
   }
 }
-.invitation .video:hover .overlay {
+.invitation .photo:hover .overlay {
   opacity: 0.5;
 }
-.invitation .video a {
+.invitation .photo a {
   z-index: 1001;
   position: absolute;
   top: 50%;
@@ -13335,12 +13338,12 @@ img {
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
-.invitation .video a i {
+.invitation .photo a i {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
 }
-.invitation .video .overlay {
+.invitation .photo .overlay {
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;

@@ -1,7 +1,7 @@
 <?php
 // Configure your number Prefix and Recipient here
 $numberPrefix = '[Casament RSVP]';
-$emailTo = 'grunyis@googlegroups.com';			// change to your email
+$emailTo = 'antar88+casament@gmail.com';			// change to your email
 $errors = array();							// array to hold validation errors
 $data = array();							// array to pass back data
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
