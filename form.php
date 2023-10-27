@@ -9,6 +9,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$email = stripslashes(trim($_POST['email']));
 	$attending = stripslashes(trim($_POST['attending']));
 	$guest = stripslashes(trim($_POST['guest']));
+	$song = stripslashes(trim($_POST['song']));
 
 	if (empty($name)) {
 		$errors['name'] = 'Name is required.';
@@ -23,10 +24,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 	} else {
 		$number = "$numberPrefix $number";
 		$body = '
-			<strong>Name: </strong>'.$name.'<br />
+			<strong>Nom: </strong>'.$name.'<br />
 			<strong>Email: </strong>'.$email.'<br />
-			<strong>Attending: </strong>'.$attending.'<br />
-			<strong>I will be alone or with: </strong>'.$guest.'<br />
+			<strong>Vindràs al casament? </strong>'.$attending.'<br />
+			<strong>Acompanyants: </strong>'.$guest.'<br />
+			<strong>Cançó: </strong>'.$song.'<br />
 		';
 		$headers  = "MIME-Version: 1.1" . PHP_EOL;
 		$headers .= "Content-type: text/html; charset=utf-8" . PHP_EOL;
