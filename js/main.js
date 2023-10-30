@@ -55,7 +55,6 @@
 				encode : true
 			}).done(function (data) {
 				// handle errors
-				debugger;
 				if (!data.success) {
 					$('#error_display').append('<ul>')
 					if (data.errors.name) {
@@ -74,6 +73,16 @@
 			}).fail(function (data) {
 				// for debug
 				// console.log(data);
+				$('#error_display').append('<ul>')
+				if (data.errors.name) {
+					$('#name-field').addClass('has-error');
+					$('#error_display').append('<li>' + data.errors.name + '</li>');
+				}
+				if (data.errors.bus) {
+					$('#bus-field').addClass('has-error');
+					$('#error_display').append('<li>' + data.errors.bus + '</li>');
+				}
+				$('#error_display').append('</ul>').show()
 			});
 			e.preventDefault();
 		});
