@@ -6,13 +6,6 @@ include('Mail.php');
 $errors = array();                          // array to hold validation errors
 $data = array();                            // array to pass back data
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $_POST = array(
-        "name" => "Nom",
-        "guest" => "Invitat",
-        "kids" => "Nens",
-        "bus" => "Autobus",
-        "song" => "Cançó"
-    );
     $name = stripslashes(trim($_POST['name']));
     $guest = stripslashes(trim($_POST['guest']));
     $kids = stripslashes(trim($_POST['kids']));
