@@ -36,16 +36,14 @@
 			// remove the error class
 			$('.form-group').removeClass('has-error');
 			$('.help-block').remove();
-			var guestsList = [];
-			$('.guest-list input').each(function() {
-				guestsList.push(this.value);
-			});
+
 			// get the form data
 			var formData = {
 				'name' : $('input[name="form-name"]').val(),
-				'email' : $('input[name="form-email"]').val(),
-				'attending': $('.switch-field input[type="radio"]:checked').attr('id'),
-				'guest': guestsList.join(', ')
+				'guest' : $('input[name="form-guest"]').val(),
+				'kids' : $('input[name="form-kids"]').val(),
+				'Bus': $('.switch-field input[type="radio"]:checked').attr('id'),
+				'song': $('input[name="form-song"]').val()
 			};
 			// process the form
 			$.ajax({

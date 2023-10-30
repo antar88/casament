@@ -445,7 +445,8 @@
                             <h2>Invitació</h2>
 
                             <p>
-                                Ens faria molta il·lusió poder compartir aquest dia amb tú.<br> Qué hi dius? T'apuntes? ;) 
+                                Ens faria molta il·lusió poder compartir aquest dia amb tú. Qué hi dius? T'apuntes? ;)  <br> 
+                                Pots enviar-nos un whatsapp o contestar el formulari seguent.
                             </p>
                         </div>
                     </div>
@@ -454,35 +455,48 @@
                         <div class="col-12 col-md-6">
                             <div class="form-wrapper">
                                 <form action="form.php" id="contact-form" class="form-horizontal" method="post">
-                                    <h3 class="invitation_heading">Vindràs al casament?</h3>
+                                    <h3 class="invitation_heading">Confirmar assistència</h3>
 
                                     <div class="row">
+                                        <div id="name-field" class="form-field col-12">
+                                            <input type="text" class="form-control" id="form-name" name="form-name" required>
+
+                                            <label for="form-name" class="control-label">El teu nom*</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- <h3 class="invitation_heading">Vens acompanyat/da?</h3>
+                                    <p> Posa els noms del l'acompanyant i/o els nens</p> -->
+
+                                    <div class="row">
+                                        <div id="guest-field" class="form-field">
+                                            <input type="text" class="form-control" id="form-guest" name="form-guest">
+                                            <label for="form-guest" class="control-label">Nom de l'acompanyant</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div id="kids-field" class="form-field">
+                                            <input type="text" class="form-control" id="form-kids" name="form-kids">
+                                            <label for="form-kids" class="control-label">Vens amb nens? Quants?</label>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="invitation_heading">Necessites transport per anar i tornar?*</h3>
+                                    
+                                    <div class="row">
                                         <div class="form-field switch-field col-12">
-                                            <input type="radio" name="rdo" id="yes" value="Si">
+                                            <input type="radio" name="rdo" id="yes" value="Yes">
 
                                             <input type="radio" name="rdo" id="no" value="No">
 
                                             <div class="switch">
-                                                <label for="yes">Si</label>
+                                                <label for="yes">Yes</label>
 
                                                 <label for="no">No</label>
 
                                                 <span></span>
                                             </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div id="name-field" class="form-field col-6">
-                                            <input type="text" class="form-control" id="form-name" name="form-name" required>
-
-                                            <label for="form-name" class="control-label">El teu nom*</label>
-                                        </div>
-
-                                        <div id="email-field" class="form-field col-6">
-                                            <input type="email" class="form-control" id="form-email" name="form-email" required>
-
-                                            <label for="form-email" class="control-label">Email*</label>
                                         </div>
                                     </div>
 
@@ -494,25 +508,6 @@
 
                                             <label for="form-song" class="control-label">Nom de la cançó i grup</label>
                                         </div>
-                                    </div>
-
-                                    <h3 class="invitation_heading">Vens acompanyat/da?</h3>
-                                    <p> Encara que siguin nens posa-ho si us plau</p>
-
-                                    <div class="row">
-                                        <div id="guest-name-field" class="form-field col-sm-8">
-                                            <input type="text" class="form-control" id="form-guest-name" name="form-name">
-
-                                            <label for="form-guest-name" class="control-label">Nom de l'acompanyant</label>
-                                        </div>
-
-                                        <div class="form-field col-sm-4 text-center">
-                                            <button type="button" class="btn btn-outline-dark w-100 add-button">Afegir acompanyant</button>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="guest-list form-field col-12"></div>
                                     </div>
 
                                     <div class="row">
@@ -574,8 +569,8 @@
 
                                 <div id="collapse2" class="panel-collapse collapse" data-bs-parent="#events">
                                     <div class="panel-body">
-                                        La idea del casament es fer un casament senzill on hem invitat només amics i familia, sobre una temàtica en concret. Si us hem donat la invitació física ja sabreu de que va :) <br>
-                                        El casament començarà a les 12:30 i podeu esperar el següent: ceremònia no convencional, aperitius, dinar i finalment ball i barra lliure. 
+                                        El casament començarà a les 12:30 i acabarà sobre les 21. <br>
+                                        La idea del casament es fer un casament senzill amb amics i familia, sobre una temàtica en concret. Si us hem donat la invitació física ja sabreu de que va :) 
                                     </div>
                                 </div>
                             </div>
@@ -589,23 +584,8 @@
 
                                 <div id="collapse3" class="panel-collapse collapse" data-bs-parent="#events">
                                     <div class="panel-body">
-                                        Ens fa molta il·lusió que vingueu i pogueu passar el dia amb nosaltres, aquest és el millor regal encara que sembli tópìc!<br>
+                                        Ens fa molta il·lusió que vingueu i pogueu passar el dia amb nosaltres, aquest és el millor regal que ens podeu donar!<br>
                                         Si de totes maneres voleu contribuir al cost del casament o subvencionar el viatge, podeu enviar-nos un bizzum o una transferència a ES5500730100570180817604
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-bs-toggle="collapse" href="#collapse4">Codi de vestimenta</a>
-                                    </h4>
-                                </div>
-
-                                <div id="collapse4" class="panel-collapse collapse" data-bs-parent="#events">
-                                    <div class="panel-body">
-                                        Ens agradaria poder fer-nos fotos formals amb vosaltres ja que com sabeu som bastant informals. <br>
-                                        De totes maneres si això implica que us hagueu de comprar un vestit, si us plau veniu com volgueu.
                                     </div>
                                 </div>
                             </div>
@@ -618,10 +598,6 @@
                                 </div>
 
                                 <div id="collapse5" class="panel-collapse collapse" data-bs-parent="#events">
-                                    <div class="panel-place">
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    </div>
-
                                     <div class="panel-body">
                                         31 de novembre
                                     </div>
