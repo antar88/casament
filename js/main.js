@@ -55,7 +55,7 @@
 				encode : true
 			}).done(function (data) {
 				// handle errors
-
+				debugger;
 				if (!data.success) {
 					$('#error_display').append('<ul>')
 					if (data.errors.name) {
