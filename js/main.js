@@ -42,7 +42,7 @@
 				'name' : $('input[name="form-name"]').val(),
 				'guest' : $('input[name="form-guest"]').val(),
 				'kids' : $('input[name="form-kids"]').val(),
-				'Bus': $('.switch-field input[type="radio"]:checked').attr('id'),
+				'bus': $('.switch-field input[type="radio"]:checked').attr('id'),
 				'song': $('input[name="form-song"]').val()
 			};
 			// process the form
@@ -59,9 +59,9 @@
 						$('#name-field').addClass('has-error');
 						$('#name-field').find('.col-sm-6').append('<span class="help-block">' + data.errors.name + '</span>');
 					}
-					if (data.errors.email) {
-						$('#email-field').addClass('has-error');
-						$('#email-field').find('.col-sm-6').append('<span class="help-block">' + data.errors.email + '</span>');
+					if (data.errors.bus) {
+						$('#bus-field').addClass('has-error');
+						$('#bus-field').find('.col-sm-6').append('<span class="help-block">' + data.errors.bus + '</span>');
 					}
 				} else {
 					// display success message
