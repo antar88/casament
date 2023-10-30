@@ -68,6 +68,7 @@
 						$('#error_display').append('<li>' + data.errors.bus + '</li>');
 					}
 					$('#error_display').append('</ul>').show()
+					$("#submit-button").text("Enviar").prop('disabled', false);
 				} else {
 					// display success message
 					$form.html('<div class="message-success">' + data.message + '</div>');
@@ -85,6 +86,7 @@
 					$('#error_display').append('<li>' + data.errors.bus + '</li>');
 				}
 				$('#error_display').append('</ul>').show()
+				$("#submit-button").text("Enviar").prop('disabled', false);
 			});
 			e.preventDefault();
 		});
