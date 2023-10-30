@@ -13572,4 +13572,8 @@ img {
   text-decoration: none;
   color: #000;
 }
+
+.error {
+  color: red;
+}
 /*# sourceMappingURL=main.css.map */

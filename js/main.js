@@ -45,6 +45,7 @@
 				'bus': $('.switch-field input[type="radio"]:checked').attr('id'),
 				'song': $('input[name="form-song"]').val()
 			};
+
 			// process the form
 			$.ajax({
 				type : 'POST',
@@ -54,15 +55,18 @@
 				encode : true
 			}).done(function (data) {
 				// handle errors
+
 				if (!data.success) {
+					$('#error_display').append('<ul>')
 					if (data.errors.name) {
 						$('#name-field').addClass('has-error');
-						$('#name-field').find('.col-sm-6').append('<span class="help-block">' + data.errors.name + '</span>');
+						$('#error_display').append('<li>' + data.errors.name + '</li>');
 					}
 					if (data.errors.bus) {
 						$('#bus-field').addClass('has-error');
-						$('#bus-field').find('.col-sm-6').append('<span class="help-block">' + data.errors.bus + '</span>');
+						$('#error_display').append('<li>' + data.errors.bus + '</li>');
 					}
+					$('#error_display').append('</ul>').show()
 				} else {
 					// display success message
 					$form.html('<div class="message-success">' + data.message + '</div>');
