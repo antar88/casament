@@ -33,6 +33,8 @@
 			}
 		});
 		$form.submit(function (e) {
+			$("#submit-button").text("enviant...").prop('disabled', true);
+
 			// remove the error class
 			$('.form-group').removeClass('has-error');
 			$('.help-block').remove();
