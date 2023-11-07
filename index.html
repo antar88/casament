@@ -29,6 +29,7 @@
         <link rel="stylesheet" type="text/css" href="css/vendor/motion.min.css">
 
         <link rel="stylesheet" type="text/css" href="css/main.css">
+
     </head>
 
     <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true">
@@ -97,9 +98,8 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <div class="display-t">
-                                <div class="display-tc animation">
+                                <div class="display-tc animation" hidden>
                                     <h1>Save the date</h1>
-
                                     <div class="banner-text d-flex justify-content-center">
                                         <span class="banner-text_city">
                                             L'Ametlla 
@@ -135,7 +135,7 @@
                             <h2>Ens casem!</h2>
 
                             <p>
-                                Ens fa molta il·lusió poder celebrar amb els amics i familia que iniciem una nova etapa.<br>
+                                Ens fa molta il·lusió poder celebrar aquest dia amb els amics i la familia.<br>
                             Gràcies per tenir-nos presents!
                             </p>
                         </div>
@@ -185,8 +185,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="heading col-12">
-                            <h2>
-                                La porpera aventura
+                            <h2 id="countdown-title">
+                                La propera aventura
 
                                 <br>
 
@@ -236,7 +236,7 @@
                                     </div>
                                 </div>
 
-                                <div class="timer-item timer-item_text">...per al casament!</div>
+                                <div class="timer-item timer-item_text"> per al casament!</div>
                             </div>
                         </div>
                     </div>
@@ -248,7 +248,7 @@
             <section id="events" class="events-accordion section">
                 <div class="row">
                         <div class="col-12 text-center heading">
-                            <span>Entorn rural al vallés oriental</span>
+                            <span>Vallès oriental</span>
 
                             <h2>Ubicació</h2>
 
@@ -318,9 +318,7 @@
 
                                         <div class="timeline-body">
                                             <p>
-                                                La Carla vivia a Antoni Maria Claret i l'Antar treballaba a glòries. Els dos eren indecisos per escollir un lloc... <br>
-                                                Així que finalment ningú va decidir: un va baixar mentre l'altre pujava pel carrer Rogent. <br> 
-                                                Finalment ens vam trobar al "Rovell del Clot"!
+                                                Ben indecisos per escollir un lloc, ens vam trobar al mig del carrer Rogent, a mig camí entre la feina d'un i la casa de l'altra. 
                                             </p>
                                         </div>
 
@@ -342,8 +340,7 @@
 
                                         <div class="timeline-body">
                                             <p>
-                                                Vam descobrir la nostra gran afició: viatjar. <br>
-                                                El nostre primer viatge va ser a Viena, on vam explorar els mercats nadalencs, visitar grans palaus i gaudir d'una sessió d'òpera.
+                                                I vam descobrir que viatjar junts era encara més divertit!  
                                             </p>
                                         </div>
 
@@ -358,14 +355,14 @@
 
                                     <div class="timeline-panel">
                                         <div class="timeline-heading">
-                                            <h3 class="timeline-title">Anem a viure junts</h3>
+                                            <h3 class="timeline-title">Junts cap al Clot</h3>
 
                                             <span class="date">Febrer, 2019</span>
                                         </div>
 
                                         <div class="timeline-body">
                                             <p>
-                                                A un se li acabava el contracte mentre l'altre el renovava en mig any. Era massa precipitat anar a viure junts?
+                                                Massa d'hora per anar a viure junts? 
                                             </p>
                                         </div>
 
@@ -386,7 +383,7 @@
 
                                         <div class="timeline-body">
                                             <p>
-                                                Vam adoptar a la Jasper i vam fer creixer la familia
+                                                Vam adoptar a la Jasper i vam fer créixer la família
                                             </p>
                                         </div>
                                     </div>
@@ -406,7 +403,7 @@
 
                                         <div class="timeline-body">
                                             <p>
-                                                Després d'una llarga espera per fi vam comprar la casa i ens vam establir com a Paretencs.
+                                                Després d'una llarga espera per fi vam comprar la casa i ens vam establir a Parets.
                                             </p>
                                         </div>
                                     </div>
@@ -426,7 +423,7 @@
 
                                         <div class="timeline-body">
                                             <p>
-                                                Després de moltes bromes, l'Antar va prendre la iniciativa. Tot i que tècnicament va ser la Jasper qui li va demanar de casar-nos.
+                                                Després de moltes bromes, l'Antar va prendre la iniciativa.
                                             </p>
                                         </div>
                                     </div>
@@ -447,8 +444,8 @@
                             <h2>Invitació</h2>
 
                             <p>
-                                Ens faria molta il·lusió poder compartir aquest dia amb tú. Qué hi dius? T'apuntes? ;)  <br> 
-                                Pots enviar un whatsapp a <a href="https://wa.me/+34628437902"> l'Antar </a> o la <a href="https://wa.me/+34636511867"> Carla </a> o contestar el formulari seguent.
+                                Ens faria molta il·lusió poder compartir aquest dia amb tu. Què dius, t'apuntes? ;)  <br> 
+                                Pots enviar un whatsapp a <a href="https://wa.me/+34628437902"> l'Antar </a> o la <a href="https://wa.me/+34636511867"> Carla </a> o contestar el següent formulari.
                             </p>
                         </div>
                     </div>
@@ -493,7 +490,7 @@
                                             <input type="radio" name="rdo" id="no" value="No">
 
                                             <div class="switch">
-                                                <label for="yes">Yes</label>
+                                                <label for="yes">Sí</label>
 
                                                 <label for="no">No</label>
 
@@ -572,7 +569,6 @@
                                 <div id="collapse2" class="panel-collapse collapse" data-bs-parent="#events">
                                     <div class="panel-body">
                                         El casament començarà a les 12:30 i acabarà sobre les 21. <br>
-                                        La idea del casament es fer un casament senzill amb amics i familia, sobre una temàtica en concret. Si us hem donat la invitació física ja sabreu de que va :) 
                                     </div>
                                 </div>
                             </div>
@@ -601,7 +597,7 @@
 
                                 <div id="collapse5" class="panel-collapse collapse" data-bs-parent="#events">
                                     <div class="panel-body">
-                                        31 de novembre
+                                        15 de desembre
                                     </div>
                                 </div>
                             </div>
@@ -621,7 +617,7 @@
                             <h2>Galeria</h2>
 
                             <p>
-                                Totes les aventures que hem vistcut aquests 5 anys... i les que ens queden!
+                                Algunes de les aventures que hem vistcut aquests 5 anys... i les que ens queden!
                             </p>
                         </div>
                     </div>

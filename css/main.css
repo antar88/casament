@@ -12341,6 +12341,11 @@ body.offcanvas {
   font-size: 50px;
   color: #000;
 }
+
+#countdown-title {
+  color: #306361;
+}
+
 .heading p {
   font-size: 18px;
   line-height: 1.5;
